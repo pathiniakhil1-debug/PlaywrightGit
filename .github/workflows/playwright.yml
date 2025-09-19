@@ -2,7 +2,7 @@ name: Playwright Tests
 
 on:
   schedule:
-    - cron: "0 2 * * *"   # Runs every day at 2 AM
+    - cron: "45 9 * * *"   # Runs every day at 2 AM
   workflow_dispatch:       # (Optional) manual trigger
   push:
     branches: [ main, master ]
