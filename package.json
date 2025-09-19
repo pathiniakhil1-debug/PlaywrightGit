@@ -1,0 +1,20 @@
+{
+  "name": "playwrightprograms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^10.0.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.0.4",
+    "allure-playwright": "^3.3.3"
+  },
+  "dependencies": {
+    "csv-parse": "^6.0.0",
+    "dotenv": "^17.0.1"
+  }
+}
