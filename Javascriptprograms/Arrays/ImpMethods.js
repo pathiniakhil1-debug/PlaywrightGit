@@ -22,8 +22,8 @@
 
 // 1. push() → adds element(s) at the end
 let arr1 = ['Hello', 'GFG', 'JS'];
-arr1.push('React'); 
-console.log(arr1); 
+arr1.push('React');
+console.log(arr1);
 // ['Hello', 'GFG', 'JS', 'React']
 
 // 2. pop() → removes the last element
@@ -39,12 +39,12 @@ console.log(arr3);         // ['GFG', 'JS']
 // 4. unshift() → adds element(s) at the beginning
 let arr4 = ['Hello', 'GFG', 'JS'];
 arr4.unshift('React');
-console.log(arr4); 
+console.log(arr4);
 // ['React', 'Hello', 'GFG', 'JS']
 
 // 5. indexOf() → returns index of first occurrence
 let arr5 = ['Hello', 'GFG', 'JS'];
-console.log(arr5.indexOf('GFG')); 
+console.log(arr5.indexOf('GFG'));
 // 1
 
 // 6. includes() → checks if element exists
@@ -54,34 +54,34 @@ console.log(arr5.includes('Python'));// false
 // 7. concat() → merges arrays
 let a1 = ['Hello', 'JS'], a2 = ['React'];
 let merged = a1.concat(a2);
-console.log(merged); 
+console.log(merged);
 // ['Hello', 'JS', 'React']
 
 // 8. forEach() → executes function for each element
-arr5.forEach(el => console.log(el)); 
+arr5.forEach(el => console.log(el));
 // Hello, GFG, JS
 
 // 9. sort() → sorts elements alphabetically
 let arr6 = ['Banana', 'Apple', 'Cherry'];
 arr6.sort();
-console.log(arr6); 
+console.log(arr6);
 // ['Apple', 'Banana', 'Cherry']
 
 // 10. map() → transforms each element, returns new array
 let nums1 = [1, 2, 3];
 let squares = nums1.map(n => n * n);
-console.log(squares); 
+console.log(squares);
 // [1, 4, 9]
 
 // 11. reduce() → reduces array to single value
 let nums2 = [1, 2, 3, 4];
 let sum = nums2.reduce((acc, n) => acc + n, 0);  // 0 is initial value  // sum of 1+2+3+4 // accumulator 
-console.log(sum); 
+console.log(sum);
 // 10
 
 // 12. filter() → filters based on condition 
 let evens = nums2.filter(n => n % 2 === 0);
-console.log(evens); 
+console.log(evens);
 // [2, 4]
 
 // map: Transforms each element in an array and returns a new array of the same length.
@@ -125,5 +125,34 @@ console.log(nums3.every(n => n > 0)); // true
 // 18. reverse() → reverses array order
 let arr9 = [1, 2, 3, 4];
 arr9.reverse();
-console.log(arr9); 
+console.log(arr9);
 // [4, 3, 2, 1]
+
+// 19.spread operator (...) → expands array elements
+let arr10 = [1, 2, 3];
+console.log(...arr10);
+// 1 2 3
+let arr11 = [4, 5];
+let combined = [...arr10, ...arr11]; //merges arr10 and arr11
+console.log(combined);
+// [1, 2, 3, 4, 5]
+
+// 20 passing multiple elements into function
+function sumThree(a, b, c) {
+    return a + b + c;
+}   
+console.log(sumThree(...arr10)); // 6 (1+2+3)
+
+// 21. Rest operator (...) → collects multiple elements into array
+function collectArgs(...args) {
+    return args;
+}   
+console.log(collectArgs(1, 2, 3, 4)); // [1, 2, 3, 4]
+
+display(1,2,3,4,5,6);
+function display(first, second, ...rest){
+    console.log(first);  // 1
+    console.log(second); // 2       
+    console.log(rest);   // [3, 4, 5, 6]
+}
+
