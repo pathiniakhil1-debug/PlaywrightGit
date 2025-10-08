@@ -1,6 +1,5 @@
 const { test, expect } = require("@playwright/test")   // Import Playwright Test functions (test, expect)
 
-
 // ✅ Test 1: Count number of rows and columns in the table
 test("No.of Rows and Columns in Table", async ({ page }) => {
 
@@ -13,7 +12,7 @@ test("No.of Rows and Columns in Table", async ({ page }) => {
     console.log("Number of columns:", await columns.count())  // Print the number of columns
 
     expect(await columns.count()).toBe(4)   // Assert that the column count is 4
-
+ 
     const rows = await table.locator("tbody tr")  // Locate all table rows (<tr>) inside <tbody>
 
     console.log("Number of rows:", await rows.count())   // Print the number of rows

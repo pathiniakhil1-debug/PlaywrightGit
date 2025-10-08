@@ -116,4 +116,3 @@ test("Authentication of Delete Call using basic auth", async ({ request }) => {
 // username + password → Authentication (identity check).
 
 // token in Cookie header → Authorization (permission to update/delete booking).
-

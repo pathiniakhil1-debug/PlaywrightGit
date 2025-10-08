@@ -60,7 +60,7 @@ test("API with UI Verification", async ({ request, page }) => {
     // Endpoint: POST /addtocart
     // 'data' object contains required payload to add a product
     const resp2 = await request.post("https://api.demoblaze.com/addtocart", {
-        data: {     
+        data: {
             "id": "90f00e36-3cef-298d-a2bc-4405c36146fc",  // unique request ID
             "cookie": "user=7118f28c-60b6-0ff0-7ae7-18766ed162f6", // identifies the user
             "prod_id": 3,  // Product ID = Samsung galaxy s6

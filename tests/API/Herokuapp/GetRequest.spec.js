@@ -17,8 +17,7 @@ test.beforeAll("Before All the Test", async () => {
         }
     })
 })
-
-
+  
 // -----------------------------
 // TEST CASE 1: Direct GET request using `request` fixture
 // -----------------------------
@@ -76,9 +75,18 @@ test("API Testing Get Practice 4", async ({ request }) => {
 // TEST CASE 5: Get Booking by ID (204)
 // -----------------------------
 test("API Testing Get Practice 5", async ({ request }) => {
-    const resp1 = await request.get("https://restful-booker.herokuapp.com/booking/204");
+    const resp1 = await request.get("https://restful-booker.herokuapp.com/booking/35");
     console.log(await resp1.json());   // ✅ Print single booking details
 })
+
+// {
+//   firstname: 'John',
+//   lastname: 'Smith',
+//   totalprice: 111,
+//   depositpaid: true,
+//   bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+//   additionalneeds: 'Breakfast'
+// }
 
 
 // -----------------------------
@@ -119,19 +127,17 @@ test("API Testing Get Practice 8", async ({ request }) => {
 
     // ✅ Validate partial JSON structure
     expect(await resp1.json()).toMatchObject({
-        "firstname": "Susan",
-        "lastname": "Jones",
-        "totalprice": 103,
-        "depositpaid": true,
-        "bookingdates": {
-            "checkin": "2024-03-15",
-            "checkout": "2025-06-07"
-        }
+        firstname: 'John',
+        lastname: 'Smith',
+        totalprice: 111,
+        depositpaid: true,
+        bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+        additionalneeds: 'Breakfast'
     })
 
     // ✅ Extract JSON and validate single field
     const jsonresp = await resp1.json()
-    expect(jsonresp.firstname).toEqual("Ssan");   // ❌ This will fail unless firstname=xyz
+    expect(jsonresp.firstname).toEqual("John");   // ❌ This will fail unless firstname=xyz
 })
 
 

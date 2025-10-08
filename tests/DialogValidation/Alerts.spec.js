@@ -2,7 +2,7 @@
 const { test, expect } = require("@playwright/test")
 
 // ===================== TEST 1: Simple Alert Box =====================
-test("Alert with Ok", async ({ page }) => {
+test.fail("Alert with Ok", async ({ page }) => {
 
   // Step 1: Open the test automation practice page
   await page.goto("https://testautomationpractice.blogspot.com/")

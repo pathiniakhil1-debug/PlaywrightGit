@@ -66,7 +66,3 @@ if (true) {
     var blockVar = "I am not block scoped";
 }
 console.log(blockVar); // Output: I am not block scoped
-
-
-
-

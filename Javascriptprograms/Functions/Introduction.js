@@ -166,4 +166,3 @@ function pureAdd(a, b) {
 
 console.log("Pure Function result →", pureAdd(2, 3));
 // Output: 5
-

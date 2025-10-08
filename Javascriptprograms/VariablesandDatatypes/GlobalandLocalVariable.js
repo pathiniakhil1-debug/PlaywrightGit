@@ -8,7 +8,7 @@
 // so that they can be accessed anywhere in the program.
 
 // let petName = 'Rocky' // Global variable
-// myFunction()
+// myFunction() 
 
 // function myFunction() {
 //     fruit = 'apple'; // Considered global
