@@ -13,7 +13,7 @@ import { test, expect } from '@playwright/test';
 // ✅ Import 'test' and 'expect' from Playwright to define and validate automated tests.
 
 test('GenerateCode', async ({ page }) => {
-  // ✅ Defines a test named 'GenerateCode' with an async function using 'page' for browser control.
+  // ✅ Defines a test named 'GenerateCode' with an async function using 'page' for browser control.csccxc
 
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   // 👉 Opens the OrangeHRM login page.
