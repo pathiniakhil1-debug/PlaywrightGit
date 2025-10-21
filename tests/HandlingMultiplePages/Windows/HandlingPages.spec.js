@@ -43,7 +43,7 @@ test("Handling Multiple Pages/Windows", async () => {
     const page1 = await context.newPage();   // Open the first page (main window)
 
     await page1.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");   // Navigate to OrangeHRM login page
-
+  
     await expect(page1).toHaveTitle("OrangeHRM");   // Validate the title of page1
 
     const pagePromise = context.waitForEvent('page');   // Prepare to wait for a new page (popup/new tab)
